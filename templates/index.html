@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anomalies Detection</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Anomalies Detection</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Anomalies Detection</h1>
+        <div class="form-group row mt-4">
+            <div class="col-md-4">
+                <label for="table-select">Select Table:</label>
+                <select class="form-control" id="table-select">
+                    <option value="" disabled selected>Select Table</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="feature-select">Select Feature:</label>
+                <select class="form-control" id="feature-select" disabled>
+                    <option value="" disabled selected>Select Feature</option>
+                </select>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button class="btn btn-primary btn-oval" id="fetch-data" disabled>Fetch Data</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div id="summary-container">
+                    <h3 class="section-heading">Summary</h3>
+                    <p id="summary-text" class="summary-text"></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="chart-container">
+                    <h3 class="section-heading">Chart</h3>
+                    <canvas id="anomalyChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div id="details-container">
+                    <h3 class="section-heading">Details</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="details-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
