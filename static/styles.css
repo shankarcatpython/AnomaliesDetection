@@ -1,8 +1,35 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f7f6;
+    margin: 0;
+    background-color: #e0e0e0;
     color: #333;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #0078d4;
+    color: #fff;
+    border-color: #0078d4;
+    text-align: center;
+}
+
+.alert-info {
+    background-color: #f1f1f1;
+    color: #333;
+    border-color: #ddd;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-top: 20px;
 }
 
 select, button {
@@ -11,14 +38,6 @@ select, button {
 
 .btn-oval {
     border-radius: 50px;
-}
-
-#chart-container, #summary-container, #details-container {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section-heading {
@@ -36,4 +55,12 @@ canvas {
     font-size: 1.1em;
     line-height: 1.6;
     color: #555;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table td {
+    word-break: break-all;
 }

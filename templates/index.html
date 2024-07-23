@@ -24,7 +24,9 @@
         </div>
     </nav>
     <div class="container mt-5">
-        <h1 class="text-center">Anomalies Detection</h1>
+        <div class="alert alert-success" role="alert">
+            <h2><strong>Anomalies Insights Dashboard</strong></h2>
+        </div>
         <div class="form-group row mt-4">
             <div class="col-md-4">
                 <label for="table-select">Select Table:</label>
@@ -44,13 +46,13 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-6">
-                <div id="summary-container">
+                <div id="summary-container" class="alert alert-info">
                     <h3 class="section-heading">Summary</h3>
                     <p id="summary-text" class="summary-text"></p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div id="chart-container">
+                <div id="chart-container" class="alert alert-info">
                     <h3 class="section-heading">Chart</h3>
                     <canvas id="anomalyChart"></canvas>
                 </div>
@@ -58,13 +60,12 @@
         </div>
         <div class="row mt-5">
             <div class="col-md-12">
-                <div id="details-container">
-                    <h3 class="section-heading">Details</h3>
+                <div id="details-container" class="alert alert-primary">
+                    <h3 class="section-heading">Detail Insights</h3>
                     <table class="table table-striped">
-                        <thead>
+                        <thead id="details-head">
                             <tr>
-                                <th>ID</th>
-                                <th>Value</th>
+                                <th>The following data contains details of the detected anomalies</th>
                             </tr>
                         </thead>
                         <tbody id="details-body">

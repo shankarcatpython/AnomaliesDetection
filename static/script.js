@@ -118,15 +118,13 @@ document.getElementById('fetch-data').addEventListener('click', () => {
             // Update details table
             const detailsBody = document.getElementById('details-body');
             detailsBody.innerHTML = ''; // Clear previous details
+
             const anomalies = JSON.parse(selectedFeature.anomalies);
             anomalies.forEach(anomaly => {
                 const row = document.createElement('tr');
-                const idCell = document.createElement('td');
-                idCell.textContent = anomaly.id;
-                const valueCell = document.createElement('td');
-                valueCell.textContent = anomaly.value.toFixed(2);
-                row.appendChild(idCell);
-                row.appendChild(valueCell);
+                const cell = document.createElement('td');
+                cell.textContent = JSON.stringify(anomaly, null, 2);
+                row.appendChild(cell);
                 detailsBody.appendChild(row);
             });
         });
